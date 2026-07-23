@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智慧工厂 - Three.js 3D场景</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Microsoft YaHei", sans-serif;
+      }
+      #app {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      canvas {
+        display: block;
+      }
+      /* 顶部标题栏 */
+      .header {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 24px;
+        background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);
+        border-radius: 4px;
+        color: white;
+        pointer-events: none;
+      }
+      .header svg {
+        width: 32px;
+        height: 32px;
+        fill: white;
+      }
+      .header h1 {
+        font-size: 28px;
+        font-weight: normal;
+        letter-spacing: 2px;
+      }
+      /* 底部导航按钮 */
+      .nav-buttons {
+        position: fixed;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        display: flex;
+        gap: 20px;
+      }
+      .nav-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid rgba(255,255,255,0.5);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+        backdrop-filter: blur(4px);
+      }
+      .nav-btn:hover {
+        background: rgba(30, 144, 255, 0.7);
+        border-color: #1e90ff;
+        transform: scale(1.1);
+      }
+      .nav-btn.active {
+        background: rgba(30, 144, 255, 0.8);
+        border-color: #1e90ff;
+      }
+      /* 标签样式 */
+      .label {
+        position: absolute;
+        padding: 4px 12px;
+        background: rgba(0, 150, 255, 0.85);
+        color: white;
+        border-radius: 20px;
+        font-size: 14px;
+        white-space: nowrap;
+        pointer-events: none;
+        transform: translate(-50%, -100%);
+        border: 1px solid rgba(255,255,255,0.5);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      }
+      .label::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid rgba(0, 150, 255, 0.85);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    
+    <!-- 顶部标题 -->
+    <div class="header">
+      <svg viewBox="0 0 24 24">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+      <h1>智慧工厂</h1>
+    </div>
+    
+    <!-- 底部导航按钮 -->
+    <div class="nav-buttons">
+      <button class="nav-btn active" data-target="home">首页</button>
+      <button class="nav-btn" data-target="deviceA">设备A</button>
+      <button class="nav-btn" data-target="deviceB">设备B</button>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
