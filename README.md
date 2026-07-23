@@ -1,71 +1,71 @@
-# Three.js 智慧工厂3D场景
+# Three.js Smart Factory 3D Scene
 
-基于原生Three.js实现的智慧工厂数字孪生3D可视化场景，参考自 https://www.webgl3d.cn/3D/gongchang/index.html#/home
+A digital twin 3D visualization of a smart factory built with vanilla Three.js.
 
-## 技术栈
-- Three.js (最新版)
-- Vite 构建工具
-- 原生JavaScript，无其他3D框架依赖
+## Tech Stack
+- Three.js (latest)
+- Vite build tool
+- Vanilla JavaScript, no other 3D framework dependencies
 
-## 功能特性
+## Features
 
-### 场景元素
-- ✅ 绿色草地地面 + 天空背景 + 雾效
-- ✅ 黑色沥青道路系统（带白色虚线，横向主路+纵向支路）
-- ✅ 厂区水泥地面
-- ✅ 主厂房建筑（米黄色墙体、蓝色屋顶、窗户、门）
-- ✅ 两个圆柱形储罐设备（深灰色罐体、蓝色管道、爬梯）
-- ✅ 蓝色水池（带Shader水波纹动画）
-- ✅ 三辆卡车模型（黑色车头、灰色车厢）
-- ✅ 大量树木绿化（沿道路和厂区周围分布，随机大小）
-- ✅ 银色旗杆 + 中国国旗（带Shader飘动动画）
-- ✅ 3D悬浮标签：厂房C、设备A、设备B
+### Scene Elements
+- ✅ Green grassland + sky background + fog effect
+- ✅ Black asphalt road system (with white dashed lines, horizontal main road + vertical side roads)
+- ✅ Factory concrete floor
+- ✅ Main factory building (beige walls, blue roof, windows, doors)
+- ✅ Two cylindrical storage tanks (dark gray tank body, blue pipes, climbing ladders)
+- ✅ Blue water pool (with shader-based water ripple animation)
+- ✅ Three truck models (black cab, gray cargo bed)
+- ✅ Numerous trees (scattered along roads and around the factory, randomized sizes)
+- ✅ Silver flagpole + Chinese national flag (with shader-based waving animation)
+- ✅ 3D floating labels: Building C, Equipment A, Equipment B
 
-### 交互功能
-- ✅ OrbitControls轨道控制：支持鼠标旋转、缩放、平移
-- ✅ 底部导航按钮：首页、设备A、设备B
-- ✅ 点击按钮相机平滑飞行定位到对应视角（带easeOutCubic缓动动画）
-- ✅ 水面波纹Shader动画（双层正弦波叠加+亮度变化）
-- ✅ 旗帜飘动Shader动画（固定旗杆侧，自由侧波动更大）
-- ✅ PCFSoftShadowMap软阴影效果
-- ✅ 窗口大小自适应
+### Interactions
+- ✅ OrbitControls: mouse rotation, zoom, and pan support
+- ✅ Bottom navigation buttons: Home, Equipment A, Equipment B
+- ✅ Smooth camera fly-to animation on button click (easeOutCubic easing)
+- ✅ Water ripple shader animation (dual sine-wave superposition + brightness variation)
+- ✅ Flag waving shader animation (fixed at the pole side, greater wave amplitude on the free side)
+- ✅ PCFSoftShadowMap soft shadow effects
+- ✅ Responsive window resizing
 
-## 运行方式
+## Getting Started
 
-### 安装依赖
+### Install Dependencies
 ```bash
 npm install
 ```
 
-### 开发模式
+### Development Mode
 ```bash
 npm run dev
 ```
-然后在浏览器中访问 http://localhost:5173
+Then open http://localhost:5173 in your browser.
 
-### 生产构建
+### Production Build
 ```bash
 npm run build
 ```
-构建产物输出到 `dist` 目录
+Build output goes to the `dist` directory.
 
-### 预览生产版本
+### Preview Production Build
 ```bash
 npm run preview
 ```
 
-## 项目结构
+## Project Structure
 ```
 threejs-factory/
 ├── src/
-│   └── main.js          # 主程序入口，包含所有场景代码
-├── index.html           # HTML入口，包含UI样式
-├── package.json         # 项目配置
-└── dist/                # 构建产物目录
+│   └── main.js          # Main entry point, contains all scene code
+├── index.html           # HTML entry, contains UI styles
+├── package.json         # Project configuration
+└── dist/                # Build output directory
 ```
 
-## 操作说明
-- **鼠标左键拖动**：旋转视角
-- **鼠标滚轮**：缩放视角
-- **鼠标右键拖动**：平移视角
-- **底部按钮**：点击切换到预设视角（首页/设备A/设备B）
+## Controls
+- **Left mouse drag**: Rotate the view
+- **Mouse wheel**: Zoom in/out
+- **Right mouse drag**: Pan the view
+- **Bottom buttons**: Click to switch to preset views (Home / Equipment A / Equipment B)
