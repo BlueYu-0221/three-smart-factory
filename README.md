@@ -2,6 +2,10 @@
 
 A digital twin 3D visualization of a smart factory built with vanilla Three.js.
 
+## Live Preview
+
+👉 [Live Demo](https://blueyu-0221.github.io/three-smart-factory/)
+
 ## Tech Stack
 - Three.js (latest)
 - Vite build tool
