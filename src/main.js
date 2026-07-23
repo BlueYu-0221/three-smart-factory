@@ -145,13 +145,13 @@ function createFactory() {
   // 窗户（浅蓝色）
   const windowMaterial = new THREE.MeshBasicMaterial({ color: 0x81D4FA });
   // 正面窗户
-  for (let i = -20; i <= 15; i += 5) {
+  for (let i = -30; i < 15; i += 5) {
     const win = new THREE.Mesh(new THREE.BoxGeometry(2.5, 2.5, 0.2), windowMaterial);
     win.position.set(i, 7, 5.1);
     group.add(win);
   }
   // 背面窗户
-  for (let i = -20; i <= 15; i += 5) {
+  for (let i = -30; i < 15; i += 5) {
     const win = new THREE.Mesh(new THREE.BoxGeometry(2.5, 2.5, 0.2), windowMaterial);
     win.position.set(i, 7, -25.1);
     group.add(win);
@@ -537,7 +537,7 @@ const poolData = createPool();
 createTrees();
 createTruck(-20, 15, 0);
 createTruck(-10, 10, Math.PI);
-createTruck(-25, 8, 0.2);
+createTruck(25, 12, 0.2);
 const flagData = createFlag();
 
 // 厂房标签
